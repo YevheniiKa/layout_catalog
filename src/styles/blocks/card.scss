@@ -1,0 +1,118 @@
+.catalog {
+  display: grid;
+  justify-content: start;
+  gap: 46px 48px;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $card-width);
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $card-width);
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $card-width);
+    justify-content: center;
+    padding: 50px 40px;
+  }
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  width: $card-width;
+
+  &__container {
+    padding: 32px 16px 16px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-bottom: 40px;
+      height: 134px;
+      width: 160px;
+    }
+  }
+
+  &__title {
+    color: $nav-link-cards-title-color;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    color: $grey-card-color;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+
+    margin: 4px 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__rating-reviews {
+    color: $nav-link-cards-title-color;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+
+    margin: 24px 0 16px;
+    &-label {
+      color: $grey-card-color;
+      line-height: 18px;
+    }
+
+    &-value {
+      color: $nav-link-cards-title-color;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    &-buy {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 166px;
+      height: 40px;
+
+      color: #fff;
+      background-color: $hover-link-button-buy-color;
+      border: none;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $hover-link-button-buy-color;
+        color: $hover-link-button-buy-color;
+      }
+    }
+  }
+}

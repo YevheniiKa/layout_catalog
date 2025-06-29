@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+
+  &__logo {
+    height: 40px;
+    margin: 10px 0;
+    margin-left: 50px;
+  }
+
+  &__nav {
+    margin-right: 50px;
+  }
+}
+
+.nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  height: 60px;
+  white-space: nowrap;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  color: $nav-link-cards-title-color;
+}
+
+.nav__item {
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      .nav__link:hover {
+        color: $hover-link-button-buy-color;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.is-active {
+  color: $hover-link-button-buy-color;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 37px;
+    border-radius: 8px;
+    background-color: $hover-link-button-buy-color;
+  }
+}
