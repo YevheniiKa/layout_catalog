@@ -27,6 +27,7 @@
 .nav__link {
   text-transform: uppercase;
   color: $nav-link-cards-title-color;
+  transition: $basic-transition;
 }
 
 .nav__item {
